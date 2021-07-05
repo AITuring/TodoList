@@ -18,14 +18,31 @@ const TodoList: FC = (): ReactElement => {
   }, [state.todoList])
 
 
-  const addTodo = useCallback((todo: ITodo) => {
+  const addTodo = useCallback((todo: ITodo):void => {
     console.log(todo);
     dispatch({
       type: ACTION_TYPE.ADD_TODO,
       payload: todo
     }
     )
-    // setTodoList(todoList => [...todoList, todo]);
+    },[])
+
+    const removeTodo = useCallback((id: number):void => {
+      dispatch({
+        type: ACTION_TYPE.REMOVE_TODO,
+        payload: id
+      })
+
+    },[])
+
+    const toggleTodo = useCallback((id: number):void => {
+      dispatch(
+        {
+          type: ACTION_TYPE.TOGGLE_TODO,
+          payload: id
+        }
+      )
+
     },[])
 
   return (
@@ -34,7 +51,11 @@ const TodoList: FC = (): ReactElement => {
         addTodo = {addTodo}
         todoList = {state.todoList}
       />
-      <TdList />
+      <TdList
+        todoList = {state.todoList}
+        removeTodo = {removeTodo}
+        toggleTodo = {toggleTodo}
+      />
     </div>
   )
 }

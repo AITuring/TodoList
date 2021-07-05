@@ -1,26 +1,32 @@
-import React, { FC, ReactElement, useCallback, useEffect, useState } from 'react';
+import React, { FC, ReactElement, useCallback, useEffect, useReducer, useState } from 'react';
 import TdInput from './Input';
 import TdList from './List';
-import { ITodo } from './typings';
+import { IState, ITodo } from './typings';
 
 const TodoList: FC = (): ReactElement => {
 
-  const [todoList, setTodoList] = useState<ITodo[]> ([]);
+  // const [todoList, setTodoList] = useState<ITodo[]> ([]);
+  const initialState: IState = {
+    todoList: []
+  }
+
+  const [state, dispatch] = useReducer(todoReducer, initialState);
 
   useEffect(() => {
-    console.log(todoList);
-  }, [todoList])
+    console.log(state.todoList);
+  }, [state.todoList])
+
 
   const addTodo = useCallback((todo: ITodo) => {
     console.log(todo);
-    setTodoList(todoList => [...todoList, todo]);
+    // setTodoList(todoList => [...todoList, todo]);
     },[])
 
   return (
     <div className="todo-list">
       <TdInput
         addTodo = {addTodo}
-        todoList = {todoList}
+        todoList = {state.todoList}
       />
       <TdList />
     </div>

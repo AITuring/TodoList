@@ -7,14 +7,21 @@ import { ACTION_TYPE, IState, ITodo } from './typings';
 const TodoList: FC = (): ReactElement => {
 
   // const [todoList, setTodoList] = useState<ITodo[]> ([]);
-  const initialState: IState = {
-    todoList: []
+  // const initialState: IState = {
+  //   todoList: []
+  // }
+  // 惰性初始化state
+  function init(initTodoList: ITodo[]):IState {
+    return {
+      todoList: initTodoList
+    }
   }
 
-  const [state, dispatch] = useReducer(todoReducer, initialState);
+  const [state, dispatch] = useReducer(todoReducer, [], init);
 
   useEffect(() => {
     console.log(state.todoList);
+    // const todoStorage = JSON.parse(localStorage.getItem('todo') || '[]')
   }, [state.todoList])
 
 

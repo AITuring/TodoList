@@ -37,14 +37,14 @@ const TdInput: FC<IProps> = ({ addTodo, todoList }): ReactElement => {
   return (
     <div className="">
       <input
-        className="w-80 mt-8 rounded-l-lg py-3 px-6 bg-gray-300 outline-none"
+        className="w-96 mt-8 rounded-l-lg py-3 px-6 bg-gray-300 outline-none placeholder-gray-400"
         type="text"
         placeholder="输入待办项"
         ref={inputRef}
         onKeyDown={getKeyDown}
         />
       <button
-        className="rounded-r-lg py-3 px-6 bg-purple-600"
+        className="rounded-r-lg py-3 px-6 bg-green-600 font-semibold text-gray-50"
         onClick={ addItem }
       >
         增加

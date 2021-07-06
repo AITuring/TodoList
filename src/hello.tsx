@@ -16,7 +16,7 @@ function Hello({ name, enthusiasmLevel = 1 }: Props) {
 
     return (
         <div className='hello'>
-            <div className='greeting'>
+            <div className='bg-purple-500 font-bold m-6'>
                 Hello {name + getExclamationMarks(enthusiasmLevel)}
             </div>
         </div>

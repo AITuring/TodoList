@@ -1,5 +1,5 @@
 import * as React from 'react';
-
+// 弃用组件，先放着吧
 export interface Props {
     name: string;
     enthusiasmLevel?: number;

@@ -9,6 +9,12 @@ interface IProps {
 const TdInput: FC<IProps> = ({ addTodo, todoList }): ReactElement => {
   const inputRef = useRef<HTMLInputElement>(null);
 
+  const getKeyDown = (e: { key: string; } ) => {
+    if (e.key === 'Enter') {
+      addItem()
+    }
+  }
+
   const addItem = (): void => {
     const val: string = inputRef.current!.value.trim();
     if (val.length) {
@@ -29,9 +35,20 @@ const TdInput: FC<IProps> = ({ addTodo, todoList }): ReactElement => {
   }
 
   return (
-    <div className="td-input">
-      <input type="text" placeholder="输入待办项" ref={inputRef} />
-      <button onClick={ addItem }>增加</button>
+    <div className="">
+      <input
+        className="w-80 mt-8 rounded-l-lg py-3 px-6 bg-gray-300 outline-none"
+        type="text"
+        placeholder="输入待办项"
+        ref={inputRef}
+        onKeyDown={getKeyDown}
+        />
+      <button
+        className="rounded-r-lg py-3 px-6 bg-purple-600"
+        onClick={ addItem }
+      >
+        增加
+      </button>
     </div>
   )
 }

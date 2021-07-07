@@ -7,19 +7,19 @@ interface IProps {
 
 }
 
-const App: FC<IProps>= (): ReactElement=> {
+const App: FC<IProps> = (): ReactElement => {
     fetch('/HPImageArchive.aspx?format=js&idx=0&n=1&mkt=zh-CN', {
         headers: {
             "Access-Control-Allow-Origin": "*",
         },
-    }).then(response =>{
-    console.log(response)
+    }).then(response => {
+        console.log(response)
     })
     return (
         <div className="bg-indigo-100 w-screen h-screen flex justify-center">
-            <div className="w-1/2 bg-white p-4 my-4 mx-20 rounded-lg bg-opacity-90 shadow-2xl">
-              <div className="left-content text-2xl font-bold">Vision</div>
-              <TodoList />
+            <div className="w-1/2 p-4 my-4 mx-20 rounded-lg shadow-2xl backdrop-filter backdrop-blur">
+                <div className="left-content text-3xl font-bold">Vision</div>
+                <TodoList />
             </div>
         </div>
     );

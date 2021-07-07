@@ -16,8 +16,8 @@ const App: FC<IProps>= (): ReactElement=> {
     console.log(response)
     })
     return (
-        <div className="bg-bing w-screen h-screen flex justify-center">
-            <div className="w-1/2 bg-white p-4 my-4 mx-20 rounded-lg bg-opacity-90">
+        <div className="bg-indigo-100 w-screen h-screen flex justify-center">
+            <div className="w-1/2 bg-white p-4 my-4 mx-20 rounded-lg bg-opacity-90 shadow-2xl">
               <div className="left-content text-2xl font-bold">Vision</div>
               <TodoList />
             </div>

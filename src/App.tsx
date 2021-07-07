@@ -8,11 +8,19 @@ interface IProps {
 }
 
 const App: FC<IProps>= (): ReactElement=> {
+    fetch('https://cn.bing.com/HPImageArchive.aspx?format=js&idx=0&n=1&mkt=zh-CN', {
+        headers: {
+            "Access-Control-Allow-Origin": "*",
+        },
+        mode: "no-cors"
+    }).then(response =>{
+    console.log(response)
+    })
     return (
-        <div className="bg-white w-screen h-screen flex justify-center relative">
+        <div className="bg-bing w-screen h-screen flex justify-center relative">
             <div className="left-content"></div>
             <TodoList />
-            <img src={todo} className="w-1/2 absolute -bottom-0 -right-0" />
+            {/* <img src={todo} className="w-1/2 absolute -bottom-0 -right-0" /> */}
         </div>
     );
 }

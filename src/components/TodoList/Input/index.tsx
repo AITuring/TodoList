@@ -35,9 +35,9 @@ const TdInput: FC<IProps> = ({ addTodo, todoList }): ReactElement => {
   }
 
   return (
-    <div className="">
+    <div className="w-full">
       <input
-        className="w-96 mt-8 rounded-l-lg py-3 px-6 bg-gray-300 outline-none placeholder-gray-400"
+        className="w-10/12 mt-8 rounded-l-lg py-3 px-6 bg-gray-300 outline-none placeholder-gray-400"
         type="text"
         placeholder="输入待办项"
         ref={inputRef}

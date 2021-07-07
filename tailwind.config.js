@@ -4,7 +4,7 @@ module.exports = {
   theme: {
     extend: {
       backgroundImage: theme => ({
-        'bing': "url('https://www.bing.com/th?id=OHR.PeruvianRainforest_ZH-CN4066508593_1920x1080.jpg&rf=LaDigue_1920x1080.jpg&pid=hp')"
+        'bing': "url('https://cn.bing.com/th?id=OHR.LakeUrmia_ZH-CN4941337431_1920x1080.jpg&rf=LaDigue_1920x1080.jpg&pid=hp')"
       })
     },
   },

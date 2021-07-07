@@ -14,7 +14,7 @@ const TdList: FC<IProps> = ({
   removeTodo
 }): ReactElement=> {
   return (
-    <div className="mt-8 p-4 bg-green-300 bg-opacity-40 rounded-lg">
+    <div className="mt-8 p-4 bg-green-400 bg-opacity-60 rounded-lg">
       {
         todoList && todoList.map((todo: ITodo)=> {
           return(

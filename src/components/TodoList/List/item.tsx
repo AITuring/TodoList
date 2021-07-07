@@ -15,9 +15,10 @@ const TdItem: FC<IProps> = ({
 	const { id, content, completed } = todo;
 
 	return (
-		<div className="todo-item relative align-middle h-13 leading-13 my-4 hover:bg-green-600 rounded-lg p-4">
+		<div className="todo-item relative align-middle h-13 leading-13 my-4 hover:bg-green-50 rounded-lg p-4">
 			<input
 				type="checkbox"
+        style={{ zoom:1.8 }}
 				checked={ completed }
 				onChange = { ()=> toggleTodo(id) }
 			/>
@@ -29,7 +30,7 @@ const TdItem: FC<IProps> = ({
 			</span>
 			<button
 				onClick = {() => removeTodo(id)}
-				className="text-gray-50 hover:text-red-500 font-semibold absolute right-0.5"
+				className="text-gray-50 hover:text-red-600 font-semibold absolute right-0.5"
 			>
 				删除
 			</button>

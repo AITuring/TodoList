@@ -1,6 +1,7 @@
 import React, { FC, ReactElement } from 'react';
 import './index.css';
 import TodoList from './components/TodoList';
+import Menu from './components/Menu';
 import todo from './assets/todo.png';
 
 interface IProps {
@@ -16,9 +17,10 @@ const App: FC<IProps> = (): ReactElement => {
         console.log(response)
     })
     return (
-        <div className="bg-sea w-screen h-screen flex justify-center">
-            <div className="w-1/2 p-4 my-4 mx-20 rounded-lg shadow-2xl backdrop-filter backdrop-blur-md bg-opacity-60 bg-gray-50">
-                <div className="left-content text-3xl font-bold">Vision</div>
+        <div className="bg-sea w-screen h-screen flex items-center">
+            <div className="w-1/2 p-4 my-4 mx-20 shadow-2xl">
+                {/* <div className="left-content text-3xl font-bold">Vision</div> */}
+                <Menu />
                 <TodoList />
             </div>
         </div>

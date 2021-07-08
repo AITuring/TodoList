@@ -53,7 +53,7 @@ const TodoList: FC = (): ReactElement => {
     },[])
 
   return (
-    <div className="z-10">
+    <div className="z-10 bg-gray-100 p-4">
       <TdInput
         addTodo = {addTodo}
         todoList = {state.todoList}

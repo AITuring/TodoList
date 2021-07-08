@@ -17,11 +17,9 @@ const App: FC<IProps> = (): ReactElement => {
         console.log(response)
     })
     return (
-        <div className="bg-sea w-screen h-screen flex items-center justify-center">
-            <div className="w-4/5 h-5/6 p-4 m-4 flex items-center">
-                <Menu />
-                <TodoList />
-            </div>
+        <div className="bg-sea w-screen h-screen flex items-center">
+            <Menu />
+            <TodoList />
         </div>
     );
 }

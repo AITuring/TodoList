@@ -53,15 +53,15 @@ const TodoList: FC = (): ReactElement => {
     },[])
 
   return (
-    <div className="w-2/3 h-full bg-forest rounded-r-lg p-4 relative">
+    <div className="backdrop-filter backdrop-blur-md bg-opacity-60 bg-gray-50 flex-1 h-full px-4 relative">
+      <TdInput
+          addTodo = {addTodo}
+          todoList = {state.todoList}
+        />
       <TdList
           todoList = {state.todoList}
           removeTodo = {removeTodo}
           toggleTodo = {toggleTodo}
-        />
-        <TdInput
-          addTodo = {addTodo}
-          todoList = {state.todoList}
         />
     </div>
   )

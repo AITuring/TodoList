@@ -53,9 +53,7 @@ const TodoList: FC = (): ReactElement => {
     },[])
 
   return (
-    <div className="w-2/3 h-full bg-gray-100 rounded-r-lg">
-      <img src="https://images.unsplash.com/photo-1625526439553-08baa1794618?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1296&q=80" className="w-full h-1/3" />
-      <div className="p-4">
+    <div className="w-2/3 h-full bg-forest rounded-r-lg p-4 relative">
       <TdList
           todoList = {state.todoList}
           removeTodo = {removeTodo}
@@ -65,7 +63,6 @@ const TodoList: FC = (): ReactElement => {
           addTodo = {addTodo}
           todoList = {state.todoList}
         />
-      </div>
     </div>
   )
 }

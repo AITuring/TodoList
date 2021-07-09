@@ -6,9 +6,8 @@ import ideaImg from '../../assets/idea.png';
 import trashImg from '../../assets/trash.png';
 
 const Menu: FC= (): ReactElement => {
-    const time = new Date()
     return (
-        <div className="bg-gray-200 dark: bg-gray-400 shadow-inner h-full w-1/9 px-6">
+        <div className="bg-gray-100 dark: bg-gray-400 shadow-inner h-full w-1/9 px-6">
             <div className="my-6 p-4 rounded-lg cursor-pointer hover:shadow-xl hover:bg-gray-100 dark:hover:bg-gray-500">
                 <img src={homeImg} className="w-6"/>
             </div>

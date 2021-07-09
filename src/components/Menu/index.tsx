@@ -1,8 +1,8 @@
 import React, { FC, ReactElement } from "react";
 import homeImg from '../../assets/home.png';
 import timeImg from '../../assets/time.png';
-import dateImg from '../../assets/date.png';
-import ideaImg from '../../assets/idea.png';
+import noteImg from '../../assets/note.png';
+import tagImg from '../../assets/tag.png';
 import trashImg from '../../assets/trash.png';
 
 const Menu: FC= (): ReactElement => {
@@ -15,10 +15,10 @@ const Menu: FC= (): ReactElement => {
                 <img src={timeImg} className="w-6"/>
             </div>
             <div className="my-6 p-4 rounded-lg cursor-pointer hover:shadow-xl hover:bg-gray-100 dark:hover:bg-gray-500">
-                <img src={dateImg} className="w-6"/>
+                <img src={noteImg} className="w-6"/>
             </div>
             <div className="my-6 p-4 rounded-lg cursor-pointer hover:shadow-xl hover:bg-gray-100 dark:hover:bg-gray-500">
-                <img src={ideaImg} className="w-6"/>
+                <img src={tagImg} className="w-6"/>
             </div>
             <div className="my-6 p-4 rounded-lg cursor-pointer hover:shadow-xl hover:bg-gray-100 dark:hover:bg-gray-500">
                 <img src={trashImg} className="w-6"/>

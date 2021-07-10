@@ -9,13 +9,6 @@ interface IProps {
 }
 
 const App: FC<IProps> = (): ReactElement => {
-    fetch('/HPImageArchive.aspx?format=js&idx=0&n=1&mkt=zh-CN', {
-        headers: {
-            "Access-Control-Allow-Origin": "*",
-        },
-    }).then(response => {
-        console.log(response)
-    })
     return (
         <div className="bg-sea w-screen h-screen flex items-center">
             <Menu />

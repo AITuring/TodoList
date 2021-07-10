@@ -52,8 +52,6 @@ const TodoList: FC = (): ReactElement => {
       )
     },[])
 
-    const time = new Date()
-
   return (
     <div className="flex-1 h-full px-4 backdrop-filter backdrop-blur-md bg-opacity-80 bg-gray-100 dark:bg-gray-500 dark:bg-opacity-90">
       <div className="text-4xl font-bold text-gray-800 mt-6">我的一天</div>

@@ -19,9 +19,9 @@ const Time: FC<IProps>= (): ReactElement=> {
     }, [])
 
     return (
-        <div className="mt-4">
-            <span className="text-gray-500 font-semibold cursor-pointer rounded-lg mr-4 py-4 hover:shadow-xl">{now.format('YYYY年M月D日')}</span>
-            <span className="text-gray-500 font-semibold cursor-pointer">{now.format('HH:mm')}</span>
+        <div className="mt-4 flex items-center">
+            <div className="text-gray-500 font-semibold cursor-pointer rounded-lg mr-4">{now.format('YYYY年M月D日')}</div>
+            <div className="text-gray-500 font-semibold cursor-pointer">{now.format('HH:mm')}</div>
         </div>
     )
 }

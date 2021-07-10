@@ -42,12 +42,14 @@ const TdInput: FC<IProps> = ({ addTodo, todoList }): ReactElement => {
       });
 
       inputRef.current!.value = '';
+      setInputState(false);
     }
   }
 
   return (
     <div className="w-full bottom-6 mt-8 rounded-sm p-3 flex items-center outline-none shadow-2xl bg-gray-100 placeholder-gray-400 dark:bg-gray-700 dark:text-gray-50">
-      <img src={add} className="w-7 block mr-2" />
+      {!inputState ? <img src={add} className="w-7 block mr-2" />
+      : <div className="bg-gray-300 w-7 h-7 rounded-full mr-2"></div>}
       <input
         className="w-11/12 bg-gray-100 outline-none placeholder-gray-400 dark:bg-gray-700 dark:text-gray-50"
         type="text"

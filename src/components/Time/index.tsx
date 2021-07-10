@@ -20,8 +20,8 @@ const Time: FC<IProps>= (): ReactElement=> {
 
     return (
         <div className="mt-4 flex items-center">
-            <div className="text-gray-500 font-semibold cursor-pointer rounded-lg mr-4">{now.format('YYYY年M月D日')}</div>
-            <div className="text-gray-500 font-semibold cursor-pointer">{now.format('HH:mm')}</div>
+            <div className="text-gray-500 font-semibold cursor-pointer rounded-lg mr-4 dark:text-gray-100">{now.format('YYYY年M月D日')}</div>
+            <div className="text-gray-500 font-semibold cursor-pointer dark:text-gray-100">{now.format('HH:mm')}</div>
         </div>
     )
 }

@@ -1,9 +1,9 @@
 import React, { FC, ReactElement } from "react";
-import homeImg from '../../assets/home.png';
-import timeImg from '../../assets/time.png';
-import noteImg from '../../assets/note.png';
-import tagImg from '../../assets/tag.png';
-import trashImg from '../../assets/trash.png';
+import homeImg from 'assets/home.png';
+import timeImg from 'assets/time.png';
+import noteImg from 'assets/note.png';
+import tagImg from 'assets/tag.png';
+import trashImg from 'assets/trash.png';
 
 const Menu: FC= (): ReactElement => {
     return (

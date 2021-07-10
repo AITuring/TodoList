@@ -2,7 +2,6 @@ import React, { FC, ReactElement } from 'react';
 import './index.css';
 import TodoList from './components/TodoList';
 import Menu from './components/Menu';
-import todo from './assets/todo.png';
 
 interface IProps {
 

@@ -21,13 +21,12 @@ const TodoList: FC = (): ReactElement => {
   const [state, dispatch] = useReducer(todoReducer, [], init);
 
   useEffect(() => {
-    console.log(state.todoList);
+    // console.log(state.todoList);
     // const todoStorage = JSON.parse(localStorage.getItem('todo') || '[]')
   }, [state.todoList])
 
 
   const addTodo = useCallback((todo: ITodo):void => {
-    console.log(todo);
     dispatch({
       type: ACTION_TYPE.ADD_TODO,
       payload: todo

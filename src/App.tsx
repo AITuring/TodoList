@@ -10,7 +10,8 @@ interface IProps {
 const App: FC<IProps> = (): ReactElement => {
     return (
         <div className="bg-sea w-screen h-screen flex items-center">
-            <Menu />
+            {/* menu目前其实没啥用 */}
+            {/* <Menu /> */}
             <TodoList />
         </div>
     );

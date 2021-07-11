@@ -18,7 +18,7 @@ const TdItem: FC<IProps> = ({
 
 	return (
 		<div
-			className="h-13 leading-13 my-4 rounded-sm p-3 flex items-center hover:bg-gray-600 hover:shadow-2xl cursor-pointer"
+			className="h-13 leading-13 my-4 rounded-sm p-3 flex items-center hover:bg-gray-200 dark:hover:bg-gray-600 hover:shadow-2xl cursor-pointer"
 			onClick={() => toggleTodo(id)}
 		>
 			{

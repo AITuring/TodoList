@@ -22,8 +22,16 @@ const TodoList: FC = (): ReactElement => {
 
   useEffect(() => {
     // console.log(state.todoList);
-    // const todoStorage = JSON.parse(localStorage.getItem('todo') || '[]')
-  }, [state.todoList])
+    const todoStorage = JSON.parse(localStorage.getItem('todo') || '[]');
+    dispatch({
+      type: ACTION_TYPE.STORAGE_LIST,
+      payload: todoStorage
+    })
+  }, []);
+
+  useEffect(() => {
+    localStorage.setItem('todo', JSON.stringify(state.todoList))
+  }, [state.todoList]);
 
 
   const addTodo = useCallback((todo: ITodo):void => {

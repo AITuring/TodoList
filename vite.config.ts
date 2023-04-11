@@ -1,5 +1,5 @@
 import { defineConfig } from 'vite';
-import reactRefresh from '@vitejs/plugin-react-refresh';
+import react from '@vitejs/plugin-react';
 import path from 'path';
 
 // https://vitejs.dev/config/
@@ -11,7 +11,7 @@ export default defineConfig({
       "assets": path.resolve(__dirname, "src/assets")
     }
   },
-  plugins: [reactRefresh()],
+  plugins: [react()],
   server: {
     port: 8888
   }

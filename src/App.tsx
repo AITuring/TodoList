@@ -1,7 +1,7 @@
-import React, { FC, ReactElement } from "react";
+import { FC, ReactElement } from "react";
 import "./index.css";
 import TodoList from "./components/TodoList";
-import Menu from "./components/Menu";
+// import Menu from "./components/Menu";
 
 interface IProps {}
 

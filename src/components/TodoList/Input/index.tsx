@@ -1,4 +1,4 @@
-import React, { FC, useRef, ReactElement, useState } from "react";
+import { FC, useRef, ReactElement, useState } from "react";
 import { ITodo } from "../typings";
 import add from "assets/add.png";
 

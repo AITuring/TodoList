@@ -1,4 +1,4 @@
-import React, { FC, ReactElement, useState } from "react";
+import { FC, ReactElement, useState } from "react";
 import TdItem from "./item";
 import { ITodo } from "../typings";
 
@@ -13,7 +13,6 @@ const TdList: FC<IProps> = ({
   toggleTodo,
   removeTodo,
 }): ReactElement => {
-  const [view, setView] = useState(false);
   return (
     <>
       {/* <div className="w-6 my-6 p-4 rounded-lg cursor-pointer bg-gray-200"></div> */}

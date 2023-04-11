@@ -1,9 +1,9 @@
-import React, { FC, ReactElement } from "react";
+import { FC, ReactElement } from "react";
 import { ITodo } from "../typings";
 import deleteImg from "assets/delete.png";
 import todoImg from "assets/todo.png";
 import doneImg from "assets/done.png";
-import doneImg2 from "assets/done2.png";
+// import doneImg2 from "assets/done2.png";
 
 interface IProps {
 	todo: ITodo;

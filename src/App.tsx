@@ -1,20 +1,18 @@
-import React, { FC, ReactElement } from 'react';
-import './index.css';
-import TodoList from './components/TodoList';
-import Menu from './components/Menu';
+import React, { FC, ReactElement } from "react";
+import "./index.css";
+import TodoList from "./components/TodoList";
+import Menu from "./components/Menu";
 
-interface IProps {
-
-}
+interface IProps {}
 
 const App: FC<IProps> = (): ReactElement => {
-    return (
-        <div className="bg-sea w-screen h-screen flex items-center">
-            {/* menu目前其实没啥用 */}
-            {/* <Menu /> */}
-            <TodoList />
-        </div>
-    );
-}
+  return (
+    <div className="bg-sea w-full h-full flex items-center">
+      {/* menu目前其实没啥用 */}
+      {/* <Menu /> */}
+      <TodoList />
+    </div>
+  );
+};
 
 export default App;

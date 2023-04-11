@@ -1,4 +1,4 @@
-import React, { FC, ReactElement } from "react";
+import { FC, ReactElement } from "react";
 import homeImg from 'assets/home.png';
 import timeImg from 'assets/time.png';
 import noteImg from 'assets/note.png';

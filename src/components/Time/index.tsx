@@ -1,4 +1,4 @@
-import React, { useState, useEffect, ReactElement, FC } from 'react';
+import { useState, useEffect, ReactElement, FC } from 'react';
 import moment from 'moment';
 
 interface IProps {
@@ -13,7 +13,7 @@ const Time: FC<IProps>= (): ReactElement=> {
             setNow(moment())
         }, 1000)
 
-        return () => {  // 每次卸载都执行此函数，清楚定时器
+        return () => {  // 每次卸载都执行此函数，清除定时器
             clearTimeout(t)
         }
     }, [])

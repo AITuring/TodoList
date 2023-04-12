@@ -23,7 +23,7 @@ const TdItem: FC<IProps> = ({ todo, toggleTodo, removeTodo }): ReactElement => {
 
   return (
     <div
-      className="h-13 leading-13 my-4 p-3 flex text-lg items-center hover:bg-gray-300 dark:hover:bg-gray-600 hover:shadow-2xl cursor-pointer"
+      className="h-13 leading-13 my-4 p-3 flex text-2xl items-center hover:bg-gray-300 dark:hover:bg-gray-600 hover:shadow-2xl cursor-pointer"
       onClick={() => toggleTodo(id)}
     >
       {completed ? (
@@ -42,13 +42,13 @@ const TdItem: FC<IProps> = ({ todo, toggleTodo, removeTodo }): ReactElement => {
       )}
       {completed ? (
         <div
-          className="w-full ml-4 font-bold text-gray-600 dark:text-gray-400"
+          className="w-full ml-4 font-bold text-gray-600 dark:text-gray-400 text-base"
           style={{ textDecoration: "line-through #43CD80 0.2rem" }}
         >
           {content}
         </div>
       ) : (
-        <div className="w-full ml-4 font-bold text-gray-600 dark:text-gray-200">
+        <div className="w-full ml-4 font-bold text-gray-600 dark:text-gray-200 text-base">
           {content}
         </div>
       )}

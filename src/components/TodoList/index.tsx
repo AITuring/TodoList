@@ -54,7 +54,7 @@ const TodoList: FC = (): ReactElement => {
   }, []);
 
   return (
-    <div className="flex-1 h-full p-4 backdrop-blur-none bg-opacity-20 bg-gray-100 dark:bg-gray-500 dark:bg-opacity-90">
+    <div className="flex-1 overflow-y-auto h-full p-4 backdrop-blur-none bg-opacity-20 bg-gray-100 dark:bg-gray-500 dark:bg-opacity-90">
       <div className="text-3xl font-bold text-gray-800 mt-6 hover:drop-shadow-2xl brightness-100">
         今日宜开心
       </div>

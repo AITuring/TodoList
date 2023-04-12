@@ -48,10 +48,10 @@ const TdInput: FC<IProps> = ({ addTodo, todoList }): ReactElement => {
   return (
     <div className="w-full bottom-6 mt-8 rounded-sm p-3 flex items-center outline-none rounded-md shadow-2xl bg-gray-100 placeholder-gray-400 dark:bg-gray-700 dark:text-gray-50">
       {!inputState ? (
-        <img src={add} className="w-7 block mr-2 cursor-pointer" />
+        <img src={add} className="w-5 block mr-2 cursor-pointer" />
       ) : (
         <div
-          className="bg-gray-300 w-7 h-7 rounded-full mr-2 cursor-pointer"
+          className="bg-gray-300 w-5 h-5 rounded-full mr-2 cursor-pointer"
           onClick={() => addItem()}
         ></div>
       )}

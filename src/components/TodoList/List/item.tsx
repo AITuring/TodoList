@@ -16,19 +16,19 @@ const TdItem: FC<IProps> = ({ todo, toggleTodo, removeTodo }): ReactElement => {
 
   return (
     <div
-      className="h-13 leading-13 my-4 rounded-md p-3 flex items-center hover:bg-gray-200 dark:hover:bg-gray-600 hover:shadow-2xl cursor-pointer"
+      className="h-13 leading-13 my-4 p-3 flex items-center hover:bg-gray-300 dark:hover:bg-gray-600 hover:shadow-2xl cursor-pointer"
       onClick={() => toggleTodo(id)}
     >
       {completed ? (
         <img
           src={doneImg}
-          className="w-7 block mr-2 cursor-pointer"
+          className="w-5 block mr-2 cursor-pointer"
           onClick={() => toggleTodo(id)}
         />
       ) : (
         <img
           src={todoImg}
-          className="w-7 block mr-2 cursor-pointer"
+          className="w-5 block mr-2 cursor-pointer"
           onClick={() => toggleTodo(id)}
         />
       )}
@@ -46,7 +46,7 @@ const TdItem: FC<IProps> = ({ todo, toggleTodo, removeTodo }): ReactElement => {
       )}
       <img
         src={deleteImg}
-        className="w-7 block mr-2 cursor-pointer"
+        className="w-5 block mr-2 cursor-pointer"
         onClick={() => removeTodo(id)}
       />
       {/* <button

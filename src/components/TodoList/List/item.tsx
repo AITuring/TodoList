@@ -1,4 +1,5 @@
 import { FC, ReactElement } from "react";
+import Icon from "../../Icon";
 import { ITodo } from "../typings";
 import deleteImg from "assets/delete.png";
 import todoImg from "assets/todo.png";
@@ -49,6 +50,7 @@ const TdItem: FC<IProps> = ({ todo, toggleTodo, removeTodo }): ReactElement => {
         className="w-5 block mr-2 cursor-pointer"
         onClick={() => removeTodo(id)}
       />
+      <Icon name="tree26" />
       {/* <button
 				onClick={() => removeTodo(id)}
 				className="text-gray-50 hover:text-red-600 font-semibold absolute right-0.5 block"

@@ -6,6 +6,7 @@ const MyIcon = createFromIconfontCN({
 
 type Props = {
   name: string;
+  onClick?: () => void;
 };
 
 const Icon: React.FC<Props> = (props) => {

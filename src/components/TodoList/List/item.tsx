@@ -3,7 +3,7 @@ import Icon from "../../Icon";
 import { ITodo } from "../typings";
 import deleteImg from "assets/delete.png";
 import todoImg from "assets/todo.png";
-import doneImg from "assets/done.png";
+// import doneImg from "assets/done.png";
 // import doneImg2 from "assets/done2.png";
 
 interface IProps {
@@ -23,7 +23,7 @@ const TdItem: FC<IProps> = ({ todo, toggleTodo, removeTodo }): ReactElement => {
 
   return (
     <div
-      className="h-13 leading-13 my-4 p-3 flex items-center hover:bg-gray-300 dark:hover:bg-gray-600 hover:shadow-2xl cursor-pointer"
+      className="h-13 leading-13 my-4 p-3 flex text-lg items-center hover:bg-gray-300 dark:hover:bg-gray-600 hover:shadow-2xl cursor-pointer"
       onClick={() => toggleTodo(id)}
     >
       {completed ? (

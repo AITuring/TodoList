@@ -12,6 +12,12 @@ interface IProps {
   removeTodo: (id: number) => void;
 }
 
+const randomTree = () => {
+  const min = 0;
+  const max = 35;
+  return Math.round(Math.random() * (max - min)) + min;
+};
+
 const TdItem: FC<IProps> = ({ todo, toggleTodo, removeTodo }): ReactElement => {
   const { id, content, completed } = todo;
 
@@ -21,12 +27,13 @@ const TdItem: FC<IProps> = ({ todo, toggleTodo, removeTodo }): ReactElement => {
       onClick={() => toggleTodo(id)}
     >
       {completed ? (
-        <img
-          src={doneImg}
-          className="w-5 block mr-2 cursor-pointer"
-          onClick={() => toggleTodo(id)}
-        />
+        <Icon name={`tree${randomTree()}`} onClick={() => toggleTodo(id)} />
       ) : (
+        // <img
+        //   src={doneImg}
+        //   className="w-5 block mr-2 cursor-pointer"
+        //   onClick={() => toggleTodo(id)}
+        // />
         <img
           src={todoImg}
           className="w-5 block mr-2 cursor-pointer"
@@ -50,7 +57,6 @@ const TdItem: FC<IProps> = ({ todo, toggleTodo, removeTodo }): ReactElement => {
         className="w-5 block mr-2 cursor-pointer"
         onClick={() => removeTodo(id)}
       />
-      <Icon name="tree26" />
       {/* <button
 				onClick={() => removeTodo(id)}
 				className="text-gray-50 hover:text-red-600 font-semibold absolute right-0.5 block"

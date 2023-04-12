@@ -23,8 +23,10 @@ const Time: FC<IProps> = (): ReactElement => {
         {now.getFullYear()}年{now.getMonth() + 1}月{now.getDate()}日
       </div>
       <div className="text-gray-500 font-semibold cursor-pointer dark:text-gray-100">
-          {now.getHours()}:{now.getMinutes()}:{now.getSeconds()}
-        </div>
+        {now.getHours() < 10 ? "0" + now.getHours() : now.getHours()}:
+        {now.getMinutes() < 10 ? "0" + now.getMinutes() : now.getMinutes()}:
+        {now.getSeconds() < 10 ? "0" + now.getSeconds() : now.getSeconds()}
+      </div>
     </div>
   );
 };

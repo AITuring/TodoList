@@ -1,4 +1,5 @@
 import { FC, ReactElement } from "react";
+import Icon from "../../Icon";
 import TdItem from "./item";
 import { ITodo } from "../typings";
 
@@ -17,7 +18,10 @@ const TdList: FC<IProps> = ({
     <>
       {/* <div className="w-6 my-6 p-4 rounded-lg cursor-pointer bg-gray-200"></div> */}
       <div className="sorted-by-completed mt-8 rounded-sm py-3 items-center outline-none rounded-md shadow-2xl bg-gray-100 placeholder-gray-400 dark:bg-gray-700 dark:text-gray-50">
-        <div className="mx-3">已完成</div>
+        <div className="mx-3 flex items-center text-lg text-gray-600">
+          <Icon name="shan_" />
+          <div className="ml-2">已完成</div>
+        </div>
         {todoList &&
           todoList
             .filter((todo) => todo.completed)
@@ -31,7 +35,12 @@ const TdList: FC<IProps> = ({
                 />
               );
             })}
-        <div className="mx-3">未完成</div>
+      </div>
+      <div className="sorted-by-completed mt-8 rounded-sm py-3 items-center outline-none rounded-md shadow-2xl bg-gray-100 placeholder-gray-400 dark:bg-gray-700 dark:text-gray-50">
+        <div className="mx-3 flex items-center text-lg text-gray-600">
+          <Icon name="shamo" />
+          <div className="ml-2">未完成</div>
+        </div>
         {todoList &&
           todoList
             .filter((todo) => !todo.completed)

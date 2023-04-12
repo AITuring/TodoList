@@ -1,10 +1,4 @@
-import {
-  FC,
-  ReactElement,
-  useCallback,
-  useEffect,
-  useReducer,
-} from "react";
+import { FC, ReactElement, useCallback, useEffect, useReducer } from "react";
 import TdInput from "./Input";
 import TdList from "./List";
 import Time from "../Time";
@@ -60,9 +54,9 @@ const TodoList: FC = (): ReactElement => {
   }, []);
 
   return (
-    <div className="flex-1 h-full p-4 backdrop-filter backdrop-blur-md bg-opacity-80 bg-gray-100 dark:bg-gray-500 dark:bg-opacity-90">
-      <div className="text-4xl font-bold text-gray-800 mt-6 hover:drop-shadow-2xl brightness-100">
-        我的一天
+    <div className="flex-1 h-full p-4 backdrop-blur-none bg-opacity-20 bg-gray-100 dark:bg-gray-500 dark:bg-opacity-90">
+      <div className="text-3xl font-bold text-gray-800 mt-6 hover:drop-shadow-2xl brightness-100">
+        今日宜开心
       </div>
       <Time />
       <TdInput addTodo={addTodo} todoList={state.todoList} />

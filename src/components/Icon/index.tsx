@@ -1,7 +1,7 @@
 import { createFromIconfontCN } from "@ant-design/icons";
 
 const MyIcon = createFromIconfontCN({
-  scriptUrl: "//at.alicdn.com/t/c/font_1733772_lbmmkx86e6.js",
+  scriptUrl: "//at.alicdn.com/t/c/font_1733772_coqpwqn2s3m.js",
 });
 
 type Props = {

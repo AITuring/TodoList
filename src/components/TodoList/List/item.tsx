@@ -18,6 +18,12 @@ const randomTree = () => {
   return Math.round(Math.random() * (max - min)) + min;
 };
 
+const randomLeaf = () => {
+  const min = 0;
+  const max = 7;
+  return Math.round(Math.random() * (max - min)) + min;
+};
+
 const TdItem: FC<IProps> = ({ todo, toggleTodo, removeTodo }): ReactElement => {
   const { id, content, completed } = todo;
 
@@ -29,16 +35,7 @@ const TdItem: FC<IProps> = ({ todo, toggleTodo, removeTodo }): ReactElement => {
       {completed ? (
         <Icon name={`tree${randomTree()}`} onClick={() => toggleTodo(id)} />
       ) : (
-        // <img
-        //   src={doneImg}
-        //   className="w-5 block mr-2 cursor-pointer"
-        //   onClick={() => toggleTodo(id)}
-        // />
-        <img
-          src={todoImg}
-          className="w-5 block mr-2 cursor-pointer"
-          onClick={() => toggleTodo(id)}
-        />
+        <Icon name={`leaf${randomLeaf()}`} onClick={() => toggleTodo(id)} />
       )}
       {completed ? (
         <div

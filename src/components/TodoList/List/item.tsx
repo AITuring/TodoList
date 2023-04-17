@@ -1,7 +1,7 @@
 import { FC, ReactElement } from "react";
 import Icon from "../../Icon";
 import { ITodo } from "../typings";
-import deleteImg from "assets/delete.png";// 
+import deleteImg from "assets/delete.png"; //
 
 interface IProps {
   todo: ITodo;
